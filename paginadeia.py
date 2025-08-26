@@ -12,7 +12,6 @@ app = Flask(__name__)
 CORS(app, supports_credentials=True)
 
 # Configuración de OpenAI
-OPENAI_API_KEY = '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'  # Asegúrate de que tu clave sea válida
 openai.api_key = OPENAI_API_KEY
 
 pdf_text = """
@@ -4221,4 +4220,5 @@ def chat():
     return jsonify({"response": ai_response, "conversationHistory": messages})
 
 if __name__ == '__main__':
+
     app.run(host="0.0.0.0", port=5000)
