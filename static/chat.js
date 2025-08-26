@@ -54,7 +54,7 @@
 
         
         // Enviar el historial completo de la conversación junto con el nuevo mensaje
-        fetch("http://localhost:5000/chat", {
+        fetch("https://armas-cq2z.onrender.com/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
