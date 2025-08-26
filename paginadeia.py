@@ -12,6 +12,7 @@ app = Flask(__name__)
 CORS(app, supports_credentials=True)
 
 # Configuración de OpenAI
+os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
 
 pdf_text = """
@@ -4222,3 +4223,4 @@ def chat():
 if __name__ == '__main__':
 
     app.run(host="0.0.0.0", port=5000)
+
