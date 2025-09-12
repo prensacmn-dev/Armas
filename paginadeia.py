@@ -4206,7 +4206,7 @@ def chat():
         response = openai.ChatCompletion.create(
             model="gpt-5",
             messages=messages,
-            max_tokens=1000,
+            max_completion_tokens=5000,
             temperature=0.9
         )
         ai_response = response['choices'][0]['message']['content'].strip()
@@ -4226,6 +4226,7 @@ def chat():
 if __name__ == '__main__':
 
     app.run(host="0.0.0.0", port=5000)
+
 
 
 
