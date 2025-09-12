@@ -4206,8 +4206,8 @@ def chat():
         response = openai.ChatCompletion.create(
             model="gpt-5",
             messages=messages,
-            max_completion_tokens=5000,
-            temperature=0.9
+            max_completion_tokens=1000,
+            temperature=1
         )
         ai_response = response['choices'][0]['message']['content'].strip()
     except Exception as e:
@@ -4226,6 +4226,7 @@ def chat():
 if __name__ == '__main__':
 
     app.run(host="0.0.0.0", port=5000)
+
 
 
 
