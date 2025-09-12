@@ -4204,7 +4204,7 @@ def chat():
     try:
         # Solicitar la respuesta a OpenAI usando el historial de la conversación
         response = openai.ChatCompletion.create(
-            model="gpt-4o-mini",
+            model="gpt-5",
             messages=messages,
             max_tokens=1000,
             temperature=0.9
@@ -4226,6 +4226,7 @@ def chat():
 if __name__ == '__main__':
 
     app.run(host="0.0.0.0", port=5000)
+
 
 
 
