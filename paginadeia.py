@@ -4197,7 +4197,8 @@ def chat():
 
     # Ahora usamos directamente pdf_text en el system prompt
     messages = conversation_history + [
-        {"role": "system", "content": f"Información relevante de los manuales:\n{pdf_text}"},
+        {"role": "system", "content": f"No saques nada de internet, no hables de política o de religión, tampoco de temas que no estén en los manuales de la info de pdf text que tienes,
+        te recuerdo, solamente debes enforcarte en la Información relevante de los manuales:\n{pdf_text}"},
         {"role": "user", "content": user_message}
     ]
 
@@ -4226,6 +4227,7 @@ def chat():
 if __name__ == '__main__':
 
     app.run(host="0.0.0.0", port=5000)
+
 
 
 
